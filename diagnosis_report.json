@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-09-08T14:27:56.271483",
+  "weather": {
+    "temperature": 19.43,
+    "humidity": 37,
+    "wind_speed": 2,
+    "description": "ясно",
+    "city": "Иркутск"
+  },
+  "total_images": 5,
+  "results": [
+    {
+      "file": "thermal_0000.png",
+      "diagnosis": "ПЕРЕГРЕВ",
+      "class_id": 1,
+      "icon": "⚠️",
+      "probabilities": {
+        "norm": 7.405511860270053e-05,
+        "overheat": 0.999925971031189,
+        "fault": 2.7616312792133613e-08
+      },
+      "weather": {
+        "temperature": 19.43,
+        "humidity": 37,
+        "wind_speed": 2,
+        "description": "ясно",
+        "city": "Иркутск"
+      }
+    },
+    {
+      "file": "thermal_0001.png",
+      "diagnosis": "ПЕРЕГРЕВ",
+      "class_id": 1,
+      "icon": "⚠️",
+      "probabilities": {
+        "norm": 7.243791333166882e-05,
+        "overheat": 0.9999275207519531,
+        "fault": 2.7642283129125644e-08
+      },
+      "weather": {
+        "temperature": 19.43,
+        "humidity": 37,
+        "wind_speed": 2,
+        "description": "ясно",
+        "city": "Иркутск"
+      }
+    },
+    {
+      "file": "thermal_0002.png",
+      "diagnosis": "ПЕРЕГРЕВ",
+      "class_id": 1,
+      "icon": "⚠️",
+      "probabilities": {
+        "norm": 6.763241981389001e-05,
+        "overheat": 0.9999324083328247,
+        "fault": 2.7935417534763474e-08
+      },
+      "weather": {
+        "temperature": 19.43,
+        "humidity": 37,
+        "wind_speed": 2,
+        "description": "ясно",
+        "city": "Иркутск"
+      }
+    },
+    {
+      "file": "thermal_0003.png",
+      "diagnosis": "НЕИСПРАВНОСТЬ",
+      "class_id": 2,
+      "icon": "❌",
+      "probabilities": {
+        "norm": 0.0009854837553575635,
+        "overheat": 0.016367249190807343,
+        "fault": 0.9826472401618958
+      },
+      "weather": {
+        "temperature": 19.43,
+        "humidity": 37,
+        "wind_speed": 2,
+        "description": "ясно",
+        "city": "Иркутск"
+      }
+    },
+    {
+      "file": "thermal_0004.png",
+      "diagnosis": "НЕИСПРАВНОСТЬ",
+      "class_id": 2,
+      "icon": "❌",
+      "probabilities": {
+        "norm": 0.0009654219611547887,
+        "overheat": 0.01564657874405384,
+        "fault": 0.9833879470825195
+      },
+      "weather": {
+        "temperature": 19.43,
+        "humidity": 37,
+        "wind_speed": 2,
+        "description": "ясно",
+        "city": "Иркутск"
+      }
+    }
+  ]
+}
