@@ -32,11 +32,12 @@
 
 ### 3. Анализ термограмм (папка)
 
-![Анализ папки](screenshots/screenshot_predict3.jpg)
+![Анализ папки](screenshots/screenshot_predict.jpg)
+![Анализ папки](screenshots/screenshot_predict2.jpg)
 
 ### 4. Диагностика одного файла
 
-![Предсказание](screenshots/screenshot_predict.jpg)
+![Предсказание](screenshots/screenshot_predict3.jpg)
 
 ---
 
