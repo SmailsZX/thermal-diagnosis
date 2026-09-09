@@ -89,7 +89,7 @@ def load_image(image_path, size=224):
 
 def get_weather(city="Irkutsk", api_key=None):
     if api_key is None:
-        api_key = os.getenv("WEATHER_API_KEY", "8da08cbfe02af111dcf10e4a2a833649")
+        api_key = os.getenv("WEATHER_API_KEY", "   ")
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric&lang=ru"
     try:
         response = requests.get(url, timeout=5)
