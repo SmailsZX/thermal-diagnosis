@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Thermal-diagnosis
+*.pth
+!models/*.pth
+output/
+data/
+*.jpg
+*.png
+!screenshots/*.png
