@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  thermal-diagnosis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: thermal-diagnosis:latest
+    container_name: thermal-diagnosis
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
