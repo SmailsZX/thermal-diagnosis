@@ -132,26 +132,55 @@ python src/analyze_folder.py --folder thermal_images/
 
 ### Требования
 - Docker Desktop
+- Docker Compose v2+
 
-### Запуск
+### Быстрый старт
 
 ```bash
+# Собрать образ и запустить контейнер
 docker-compose up --build
+
+# Запустить в фоновом режиме
+docker-compose up -d
+
+# Остановить и удалить контейнер
+docker-compose down
+
+# Посмотреть логи
+docker-compose logs -f
 ```
 
-**Что произойдёт:**
-- Соберётся образ (Python 3.11-slim + OpenCV)
-- Запустится контейнер `thermal-diagnosis`
+### Что произойдёт:
+- Собирается образ на базе `python:3.12-slim`
+- Устанавливаются все зависимости из `requirements.txt`
+- Запускается контейнер `thermal-diagnosis` на порту 8000
 
-### Остановка
+### Переменные окружения
+
+| Переменная | Описание | По умолчанию |
+|------------|----------|--------------|
+| `WEATHER_API_KEY` | API ключ OpenWeatherMap | - |
+| `PYTHONUNBUFFERED` | Отключает буферизацию вывода | 1 |
+
+### Обьёмы (volumes)
+
+- `./data:/app/data` — папка с термограммами
+- `./models:/app/models` — сохранённые модели
+
+### Сборка только образа
 
 ```bash
-docker-compose down
+docker build -t thermal-diagnosis .
 ```
 
 ### Важно
 - **`libgl1` и `libglib2.0-0`** — системные зависимости для OpenCV (уже в Dockerfile).
-- **`WEATHER_API_KEY`** — передаётся через `environment` в `docker-compose.yml`.
+- Для GPU-ускорения добавьте в `docker-compose.yml`:
+  ```yaml
+  runtime: nvidia
+  devices:
+    - /dev/nvidia0:/dev/nvidia0
+  ```
 
 ---
 
