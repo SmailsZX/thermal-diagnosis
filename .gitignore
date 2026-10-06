@@ -223,4 +223,8 @@ output/
 data/
 *.jpg
 *.png
-!screenshots/*.png.idea/
+!screenshots/*.png
+
+# IDE
+.idea/
+.vscode/
